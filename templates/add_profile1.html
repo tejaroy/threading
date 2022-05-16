@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Profile</title>
+</head>
+<body>
+
+<h3>Profile form</h3>
+<form action="/add_data/{{data.id}}/update" method="POST">
+    <table>
+        <tr><td>first_name</td><td><input type="text" value="{{ data.first_name }}" name="first_name" placeholder="first name" required></td></tr>
+        <tr><td>last_name</td><td><input type="text"  value="{{ data.last_name }}"name="last_name" placeholder="last name" required></td></tr>
+        <tr><td>username</td><td><input type="text" value="{{ data.username }}"name="username" placeholder="username" required></td></tr>
+        <tr><td>age</td><td><input type="number" value="{{ data.age }}"name="age" placeholder="age" required></td></tr>
+        <tr><td>phonenumber</td><td><input type="number" value="{{ data.phonenumber }}" name="phonenumber" placeholder="phonenumber" required></td></tr>
+        <tr><td><input type="submit" name="submit"></td></tr>
+    </table>
+</form>
+</body>
+</html>

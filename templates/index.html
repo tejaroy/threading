@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index Page</title>
+</head>
+<body>
+<h2>Profiles</h2>
+<a href="/add_data">Add</a>
+<br>
+<table border="1px">
+<thead>
+<th>Id</th>
+<th>First name</th>
+<th>Last name</th>
+<th>username</th>
+<th>age</th>
+<th>phonenumber</th>
+<th>#</th>
+<th>#</th>
+</thead>
+{% for data in profiles %}
+<tbody>
+<td>{{data.id}}</td>
+<td>{{data.first_name}}</td>
+<td>{{data.last_name}}</td>
+<td>{{ data.username}}</td>
+<td>{{data.age}}</td>
+<td>{{ data.phonenumber}}</td>
+<td><a href="/delete/{{data.id}}" type="button">Delete</a></td>
+<td><a href="/add_data/{{data.id}}/update" type="button">Edit</a></td>
+
+</tbody>
+{% endfor %}
+</table>
+
+</body>
+
+</html>
